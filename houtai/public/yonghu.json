@@ -1,0 +1,179 @@
+﻿{
+	"code": 0,
+	"data": [
+		{
+			"path": "/home",
+			"name": "home",
+			"component": "home",
+			"meta": {
+				"title": "message.router.home",
+				"isLink": "",
+				"isHide": false,
+				"isKeepAlive": true,
+				"isAffix": true,
+				"isIframe": false,
+				"roles": ["yonghu"],
+				"icon": "iconfont icon-shouye"
+			}
+		},
+		{
+			"path": "/yonghugrzlgl",
+			"name": "yonghugrzlgl",
+			"component": "layout/routerView/parent",
+			"meta": {
+				"title": "个人资料管理",
+				"isLink": "",
+				"isHide": false,
+				"isKeepAlive": true,
+				"isAffix": false,
+				"isIframe": false,
+				"roles": ["yonghu"],
+				"icon": "el-icon-football"
+			},
+			"children": [
+				{
+					"path": "/yonghu_updt2/1",
+					"name": "yonghu_updt2",
+					"component": "yonghu/personal/index",
+					"meta": {
+						"title": "修改个人资料",
+						"isLink": "",
+						"isHide": false,
+						"isKeepAlive": true,
+						"isAffix": false,
+						"isIframe": false,
+						"roles": ["yonghu"],
+						"icon": "el-icon-basketball"
+					}
+				}
+			]
+		},
+
+		{
+			"path": "/xinwentongzhigl",
+			"name": "xinwentongzhigl",
+			"component": "layout/routerView/parent",
+			"meta": {
+				"title": "汉服书籍",
+				"isLink": "",
+				"isHide": false,
+				"isKeepAlive": true,
+				"isAffix": false,
+				"isIframe": false,
+				"roles": [
+					"yonghu"
+				],
+				"icon": "el-icon-football"
+			},
+			"children": [
+				{
+					"path": "/xinwentongzhi/1",
+					"name": "xinwentongzhi",
+					"component": "xinwentongzhi/index",
+					"meta": {
+						"title": "书籍管理",
+						"isLink": "",
+						"isHide": false,
+						"isKeepAlive": true,
+						"isAffix": false,
+						"isIframe": false,
+						"roles": [
+							"yonghu"
+						],
+						"icon": "el-icon-basketball"
+					}
+				}
+			]
+		},
+
+		{
+			"path": "/kepuglygl",
+			"name": "kepuglygl",
+			"component": "layout/routerView/parent",
+			"meta": {
+				"title": "汉服科普管理",
+				"isLink": "",
+				"isHide": false,
+				"isKeepAlive": true,
+				"isAffix": false,
+				"isIframe": false,
+				"roles": [
+					"yonghu"
+				],
+				"icon": "el-icon-football"
+			},
+			"children": [
+				{
+					"path": "/kepuxinxi/1",
+					"name": "kepuxinxi",
+					"component": "kepuxinxi/index",
+					"meta": {
+						"title": "汉服科普查询",
+						"isLink": "",
+						"isHide": false,
+						"isKeepAlive": true,
+						"isAffix": false,
+						"isIframe": false,
+						"roles": [
+							"yonghu"
+						],
+						"icon": "el-icon-basketball"
+					}
+				}
+			]
+		},
+
+		{
+			"path": "/hanfuhuodongglygl",
+			"name": "hanfuhuodongglygl",
+			"component": "layout/routerView/parent",
+			"meta": {
+				"title": "汉服活动管理",
+				"isLink": "",
+				"isHide": false,
+				"isKeepAlive": true,
+				"isAffix": false,
+				"isIframe": false,
+				"roles": [
+					"yonghu"
+				],
+				"icon": "el-icon-football"
+			},
+			"children": [
+				{
+					"path": "/hanfuhuodong/1",
+					"name": "hanfuhuodong",
+					"component": "hanfuhuodong/index",
+					"meta": {
+						"title": "汉服活动查询",
+						"isLink": "",
+						"isHide": false,
+						"isKeepAlive": true,
+						"isAffix": false,
+						"isIframe": false,
+						"roles": [
+							"yonghu"
+						],
+						"icon": "el-icon-basketball"
+					}
+				}
+			]
+		},
+
+		{
+			"path": "/resetPass",
+			"name": "resetPass",
+			"component": "resetPass/index",
+			"meta": {
+				"title": "message.router.resetPass",
+				"isLink": "",
+				"isHide": false,
+				"isKeepAlive": true,
+				"isAffix": false,
+				"isIframe": false,
+				"roles": ["yonghu"],
+				"icon": "el-icon-s-grid"
+			}
+		}
+	]
+}

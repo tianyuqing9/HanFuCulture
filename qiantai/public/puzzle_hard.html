@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3x3 Puzzle Game</title>
+<style>
+*{margin: 0;padding: 0;}
+#ul{
+    background: lemonchiffon;
+    width: 308px;
+    height: 306px;
+    padding-top: 2px;
+    position: relative;
+    left: 50px;
+    border: 4px solid #000;
+    border-radius: 4px;
+    margin: 20px auto;
+}
+#ul li{width: 100px;height: 100px;background:url(./HanFuPhoto\ \(28\).jpg) pink;float: left;list-style-type: none;margin: 0 0 2px 2px;transition: .3s;
+    line-height: 100px;text-align: center;color: white;text-shadow: 1px 1px 1px #000;font-size: 20px;}
+#ul li.active{background: lemonchiffon;
+}
+.button{
+   width: 200px;
+   height: 50px;
+   color: white;
+   background-color: #0099FF;
+   border-radius: 5px;
+   text-align: center;
+   line-height: 50px;
+   margin: 0 auto;
+   margin-top: 10px;
+}
+img{
+    width: 622px;
+    height: 622px;
+}
+.img{
+    width: 622px;
+    height: 622px;
+    display: inline-block;
+    position: relative;
+    top: -18px;
+    left: 115px;
+}
+.box{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    position: relative;
+    left: 115px;
+}
+</style>
+<script>
+window.onload = function () {
+    let p1 = new Ping();
+    p1.init("ul",6);
+}
+function startGame() {
+    let p1 = new Ping();
+    p1.init("ul", 6);
+}
+function Ping(){
+    this.oUl = null;
+    this.aLi = null;
+    this.len = 0;
+    this.oLi = null;
+    this.num = 0;
+    this.zIndex = 2;
+    this.arr = [];
+}
+Ping.prototype.init = function(id, num){
+    this.oUl = document.querySelector(id);
+    this.oUl.innerHTML = this.sheng(num);
+    this.aLi = this.oUl.querySelectorAll("li");
+    this.len = this.aLi.length;
+    this.num = num;
+
+    this.oLi = this.aLi[this.len-1];
+    this.oLi.className = 'active';
+    this.ding();
+    this.click();
+    this.jian();
+}
+// 判断合并
+Ping.prototype.he = function(){
+    let arr1 = [];
+    let arr2 = [];
+    let n = 0;
+    for(let i = 0;i<this.len;i++){
+        arr1.push(this.aLi[i].index);
+        arr2.push(this.arr[i][2]);
+    }
+    for(let i = 0;i<this.len;i++){
+        if(arr1[i] == arr2[i]){
+            n += 1;
+        }
+        if(n == this.len){
+            alert("恭喜闯关成功了！");
+            this.num ++;
+            let This = this;
+            setTimeout(function(){
+                This.init("ul",This.num);
+            },1000)
+        }
+    }
+}
+// 通过index找到Li
+Ping.prototype.Li = function(index){
+    for(let i = 0;i<this.len;i++){
+        if(this.aLi[i].index == index){
+            return this.aLi[i];
+        }
+    }
+}
+// 键盘移动
+Ping.prototype.jian = function(){
+    let This = this;
+    document.onkeydown = function(ev){
+        ev = ev || event;
+        if(ev.keyCode == 37){       //zou
+            if(This.oLi.index-1 < 0){
+                This.move(This.Li(This.oLi.index));
+            }else{
+                This.move(This.Li(This.oLi.index-1));
+            }
+        }else if(ev.keyCode == 39){     //you
+            if(This.oLi.index+1 > This.len-1){
+                This.move(This.Li(This.oLi.index));
+            }else{
+                This.move(This.Li(This.oLi.index+1));
+            }
+        }else if(ev.keyCode == 38){     //shang
+            if(This.oLi.index-This.num < 0){
+                This.move(This.Li(This.oLi.index));
+            }else{
+                This.move(This.Li(This.oLi.index-This.num));
+            }
+        }else if(ev.keyCode == 40) {   //xia
+            if(This.oLi.index+This.num > This.len-1){
+                This.move(This.Li(This.oLi.index));
+            }else{
+                This.move(This.Li(This.oLi.index+This.num));
+            }
+        }     
+    }
+}
+// 判断是否可以移动
+Ping.prototype.pan = function(li){
+    let index = li.index;
+    let num = this.oLi.index;
+    if(num%this.num == 0){
+        if(index+this.num == num || index-this.num == num || index-1 == num){
+            console.log("keyi");
+            return true;
+        }
+    }else if(num%this.num == this.num-1){
+        if(index+this.num == num || index-this.num == num || index+1 == num){
+            console.log("keyi");
+            return true;
+        } 
+    }else{
+        if(index+this.num == num || index-this.num == num || index-1 == num || index+1 == num){
+            console.log("keyi");
+            return true;
+        }  
+    }
+    return false;
+}
+// 移动
+Ping.prototype.move = function(li){
+    if(this.pan(li)){
+        li.style.left = this.arr[this.oLi.index][0] + "px";
+        li.style.top = this.arr[this.oLi.index][1] + "px";
+        this.oLi.style.left = this.arr[li.index][0] +  "px";
+        this.oLi.style.top = this.arr[li.index][1] + "px";
+        [this.oLi.index,li.index] = [li.index,this.oLi.index];
+        this.he();
+    }
+}
+// 点击
+Ping.prototype.click = function(){
+    let This = this;
+    for(let i = 0;i<this.len;i++){
+        this.aLi[i].onclick = function(){
+            this.style.zIndex = This.zIndex ++ ;
+            This.move(this);
+        }
+    }
+}
+// 定位
+Ping.prototype.ding = function(){
+    let arr1 = [];
+    let arrA = [];
+    for (let i = 0; i< this.len; i++) {
+        arr1.push( [this.aLi[i].offsetLeft,this.aLi[i].offsetTop,i]);  
+        arrA.push( [this.aLi[i].offsetLeft,this.aLi[i].offsetTop,i]);
+    }
+    this.arr = arrA;
+    // 随机
+    let arr2 = [];
+    for(let i = 0;i < this.len-1;i++){
+        arr2.push(arr1[i]);
+    }
+    arr2.sort(function(a,b){
+        return Math.random() - 0.5;
+    });
+    arr2.push( arr1[this.len-1]);
+    // 逆序数
+    let arr3 = [];
+    let a = 0;
+    for(let i = 0;i<this.len;i++){
+        arr3.push(arr2[i][2]);
+    }
+    for(let i = 0;i<this.len;i++){
+        let b = arr3[i];
+        for(let j = i;j<this.len;j++){
+            let c = arr3[j];
+            if(b>c){
+                a += 1;
+            }
+        }
+    }
+    if(a%2 == 0){
+        console.log("加油~");
+    }else{
+        console.log("你不会成功的！");
+        this.ding();
+        return false;
+    }
+    arr1 = arr2;
+    for(let i = 0;i<this.len;i++){
+        if(this.num > 5){
+            this.aLi[i].innerHTML = i+1;
+        }
+        this.aLi[i].style.position = "absolute";
+        this.aLi[i].style.left = arr1[i][0] + "px";
+        this.aLi[i].style.top = arr1[i][1] + "px";
+        this.aLi[i].index = arr1[i][2];
+        this.aLi[i].style.margin = 0;
+        this.aLi[i].style.backgroundSize = this.num * 100 + "px";
+        this.aLi[i].style.backgroundPosition = (i%this.num)*-100 + "px " + ((i-(i%this.num))/this.num)*-100 + "px";
+    }
+}
+// 生成元素->li
+Ping.prototype.sheng = function(num){
+    this.oUl.style.width = 2 + num*2 + num*100 + "px";
+    this.oUl.style.height = num*2 + num*100 + "px";
+    let n = num*num;
+    let str = "";
+    for(let i = 0; i<n; i++){
+        str += "<li></li>";
+    }
+    return str;
+}
+</script>
+</head>
+<body>
+    <div class="button" onclick="startGame()">开始游戏</div>
+    <div class="img">
+        <img src="./HanFuPhoto (28).jpg" alt="">
+    </div>
+    <div class="box">
+        <ul id="ul">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="active"></li>
+        </ul>
+    </div>
+</body>
+</html>

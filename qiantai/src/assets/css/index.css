@@ -1,0 +1,464 @@
+@charset "utf-8";
+/* CSS Document */
+
+.customer {
+    width: 1200px;
+    height: 308px;
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+    top: 0px;
+}
+
+.customer .books {
+    width: 386px;
+    height: 308px;
+    background-image: url("../images/001.png");
+    background-size: cover;
+    float: left;
+}
+
+.customer .books span {
+    height: 60px;
+    line-height: 65px;
+    padding: 0 133px;
+    float: left;
+}
+
+.customer .books ul {
+    width: 330px;
+    height: 168px;
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+}
+
+.customer .books span a{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "楷体";
+}
+
+.customer .books ul li {
+    width: 330px;
+    height: 40px;
+    line-height: 30px;
+    font-size: 35px;
+    border-bottom: dashed 1px #3b3838;
+}
+
+.customer .books p {
+    width: 330px;
+    height: 42px;
+    line-height: 42px;
+    text-indent: 2em;
+}
+
+.customer .books ul li a:hover {
+    color: #1f71b6;
+}
+
+.customer .product {
+    width: 376px;
+    height: 308px;
+    background: #FFFFFF;
+    float: left;
+    margin-left: 20px;
+    position: relative;
+}
+
+.customer .product ul li {
+    width: 330px;
+    height: 308px;
+    margin: 0 22px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.customer .product ul li a img{
+    width: 100%;
+    height: 100%;
+}
+
+.customer .product i {
+    position: absolute;
+    top: 14px;
+    right: 8px;
+    z-index: 3
+}
+
+.customer .product i span {
+    width: 36px;
+    height: 28px;
+    float: left;
+    background: #dcdcdc;
+    margin-left: 3px;
+}
+
+.customer .product .curr {
+    width: 34px;
+    height: 26px;
+    background: #398b33;
+    border: solid 1px #136b0f;
+}
+
+.customer .product .curr b {
+    width: 34px;
+    height: 26px;
+    background: url(../images/icon02.png);
+    float: left;
+}
+
+.customer .product big {
+    width: 330px;
+    height: 43px;
+    background: #000000;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.customer .product p a {
+    width: 330px;
+    height: 43px;
+    font-size: 18px;
+    line-height: 43px;
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.customer .consult {
+    width: 360px;
+    height: 308px;
+    background: #FFFFFF;
+    float: left;
+    margin-left: 20px;
+    position: relative;
+}
+
+.customer .consult span {
+    font-size: 26px;
+    color: deeppink;
+    margin: 10px 0 10px 15px;
+    display: block;
+}
+
+.customer .consult big {
+    width: auto;
+    height: 32px;
+    line-height: 32px;
+    font-size: 32px;
+    color: #077c2b;
+    background: url(../images/08.png) no-repeat;
+    padding-left: 45px;
+    display: block;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+.customer .consult .web {
+    margin-left: 15px;
+    margin-top: 35px;
+}
+
+.customer .consult .qq{
+    weight:50px;
+    height:50px;
+    float: left;
+}
+
+.customer .consult .qq img{
+    width: 100%;
+    height: 100%;
+}
+
+.customer .consult .wechat{
+    weight:50px;
+    height:50px;
+    margin-left: 25px;
+    float: left;
+}
+
+.customer .consult .wechat img{
+    width: 100%;
+    height: 100%;
+}
+
+.customer .consult .weibo img{
+    width: 50px;
+    height: 50px;
+    margin-left: 25px;
+}
+
+.customer .consult .web p {
+    margin-top: 25px;
+    margin-left: 0;
+    padding-top: -10px;
+}
+
+.customer .consult .web p a {
+    padding-left: 4px;
+    font-family: "宋体";
+    font-size: 23px;
+    font-weight: bold;
+    color: #484844;
+}
+
+.customer .consult .web p img{
+    weight:30px;
+    height: 30px;
+    margin-top: -5px;
+    float: left;
+}
+
+.customer .consult b {
+    position: absolute;
+    right: 20px;
+    top: -78px;
+}
+
+.customer .consult .kf img{
+    height: 300px;
+    margin-top: -20px;
+    margin-left: 250px;
+}
+
+.main01 {
+    width: 1198px;
+    height: 548px;
+    border: solid 1px #dcdcdc;
+    background: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 6px;
+}
+
+.main01 h2 {
+    width: 100px;
+    height: 55px;
+    background: url(../images/11.png);
+    border-bottom: solid 1px #dcdcdc;
+    position: relative;
+}
+
+.main01 h2 span {
+    width: 192px;
+    height: 64px;
+    background: url(../images/006.png);
+    position: absolute;
+    bottom: -1px;
+    left: 44px;
+}
+
+.main01 h2 .right, .main02 h2 .right {
+    margin-right: 30px;
+    float: right;
+}
+
+.main01 h2 .right b, .main02 h2 .right b {
+    width: 10px;
+    height: 10px;
+    background: #b4b1a9;
+    border-radius: 5px;
+    margin: 22px 5px;
+    float: left;
+}
+
+.main01 h2 .right .curr01, .main02 h2 .right .curr01 {
+    background: #9b6d24;
+}
+
+.main01 h2 .right p, .main02 h2 .right p {
+    width: 18px;
+    height: 18px;
+    background: #b4b1a9;
+    border-radius: 9px;
+    margin: 17px 5px;
+    float: left;
+}
+
+.main01 h2 .right p i {
+    width: 0;
+    height: 0;
+    border-bottom: transparent solid 5px;
+    border-top: transparent solid 5px;
+    border-left: transparent solid 8px;
+    border-right: #FFFFFF solid 8px;
+    display: block;
+    margin-left: -4px;
+    margin-top: 4px;
+}
+
+.main01 h2 .right p big {
+    width: 0;
+    height: 0;
+    border-bottom: transparent solid 5px;
+    border-top: transparent solid 5px;
+    border-left: #FFFFFF solid 8px;
+    border-right: transparent solid 8px;
+    display: block;
+    margin-left: 6px;
+    margin-top: 4px;
+}
+
+.main01 h2 .right .curr02, .main02 h2 .right .curr02 {
+    background: #9b6d24;
+}
+
+.main01 .goods {
+    margin-top: 8px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.main01 .goods ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main01 .goods ul li {
+    margin-top: 40px;
+    margin-right: 35px;
+    float: left;
+}
+
+.main01 .goods ul li p {
+    width: 200px;
+    text-align: center;
+    padding-top: 24px;
+}
+
+.main02 {
+    width: 1200px;
+    height: 550px;
+    background: #FFFFFF;
+    margin: 0 auto;
+
+    margin-bottom: 30px;
+}
+
+.main02 h2 {
+    width: 1198px;
+    height: 55px;
+    /* background: url(../images/11.png); */
+    border-bottom: solid 1px #dcdcdc;
+    position: relative;
+}
+
+.main02 h2 span {
+    width: 192px;
+    height: 64px;
+    color: #484844;
+    line-height: 64px;
+    text-align: center;
+    /* box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2); */
+    /* background-color: darkorange; */
+    position: absolute;
+    /* bottom: -1px; */
+    left: 44px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "楷体";
+}
+
+.main02 h2 p {
+    font-size: 18px;
+    color: #484844;
+    opacity: 0.8;
+    padding: 45px 52px;
+    text-align: center;
+    position: absolute;
+}
+
+.main02 .company01 {
+    width: 380px;
+    height: 340px;
+    margin-top: 45px;
+    margin-left: 24px;
+    float: left;
+}
+
+.main02 .company01 span {
+    font-size: 20px;
+    color: #555452;
+}
+
+.main02 .company01 p {
+    line-height: 26px;
+    font-size: 17px;
+    font-family: "宋体";
+    margin-top: 25px;
+    margin-right: 15px;
+    color: #524d4d;
+    margin-bottom: 35px;
+    text-indent: 2em;
+}
+
+.main02 .company01 a {
+    width: 102px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    background-color: darkorange;
+    border: solid 1px darkorange;
+    display: block;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: "宋体";
+}
+
+.main02 .company02 {
+    width: 374px;
+    height: 250px;
+    color: #555452;
+    margin-right: 20px;
+    margin-top: 45px;
+    float: left;
+}
+
+.main02 .company02 p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.main02 .company02 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main02 .company02 span {
+    font-family: "宋体";
+    line-height: 26px;
+}
+
+.main02 .company03 {
+    width: 374px;
+    height: 250px;
+    color: #555452;
+    margin-right: 20px;
+    margin-top: 45px;
+    float: left;
+}
+
+.main02 .company03 p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.main02 .company03 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main02 .company03 span {
+    font-family: "宋体";
+    line-height: 26px;
+}
+

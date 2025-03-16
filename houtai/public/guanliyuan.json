@@ -1,0 +1,464 @@
+﻿{
+  "code": 0,
+  "data": [
+    {
+      "path": "/home",
+      "name": "home",
+      "component": "home",
+      "meta": {
+        "title": "message.router.home",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": true,
+        "isIframe": false,
+        "roles": [
+          "guanliyuan"
+        ],
+        "icon": "iconfont icon-shouye"
+      }
+    },
+    {
+      "path": "/xtyhgl",
+      "name": "xtyhgl",
+      "component": "layout/routerView/parent",
+      "meta": {
+        "title": "系统用户管理",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": false,
+        "isIframe": false,
+        "roles": [
+          "guanliyuan"
+        ],
+        "icon": "el-icon-football"
+      },
+      "children": [
+        {
+          "path": "/guanliyuan/1",
+          "name": "guanliyuan",
+          "component": "guanliyuan/index",
+          "meta": {
+            "title": "管理员用户",
+            "isLink": "",
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false,
+            "isIframe": false,
+            "roles": [
+              "guanliyuan"
+            ],
+            "icon": "el-icon-basketball"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/xinwentongzhigl",
+      "name": "xinwentongzhigl",
+      "component": "layout/routerView/parent",
+      "meta": {
+        "title": "汉服书籍",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": false,
+        "isIframe": false,
+        "roles": [
+          "guanliyuan"
+        ],
+        "icon": "el-icon-football"
+      },
+      "children": [
+        {
+          "path": "/xinwentongzhi/1",
+          "name": "xinwentongzhi",
+          "component": "xinwentongzhi/index",
+          "meta": {
+            "title": "书籍管理",
+            "isLink": "",
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false,
+            "isIframe": false,
+            "roles": [
+              "guanliyuan"
+            ],
+            "icon": "el-icon-basketball"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/bhtgl",
+      "name": "bhtgl",
+      "component": "layout/routerView/parent",
+      "meta": {
+        "title": "变幻图设置",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": false,
+        "isIframe": false,
+        "roles": [
+          "guanliyuan"
+        ],
+        "icon": "el-icon-football"
+      },
+      "children": [
+        {
+          "path": "/bianhuantu/1",
+          "name": "bianhuantu",
+          "component": "bianhuantu/index",
+          "meta": {
+            "title": "变幻图设置",
+            "isLink": "",
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false,
+            "isIframe": false,
+            "roles": [
+              "guanliyuan"
+            ],
+            "icon": "el-icon-basketball"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/kepuglygl",
+      "name": "kepuglygl",
+      "component": "layout/routerView/parent",
+      "meta": {
+        "title": "汉服科普管理",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": false,
+        "isIframe": false,
+        "roles": [
+          "guanliyuan"
+        ],
+        "icon": "el-icon-football"
+      },
+      "children": [
+        {
+          "path": "/kepuxinxi/1",
+          "name": "kepuxinxi",
+          "component": "kepuxinxi/index",
+          "meta": {
+            "title": "汉服科普查询",
+            "isLink": "",
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false,
+            "isIframe": false,
+            "roles": [
+              "guanliyuan"
+            ],
+            "icon": "el-icon-basketball"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/hanfuleixingglygl",
+      "name": "hanfuleixingglygl",
+      "component": "layout/routerView/parent",
+      "meta": {
+        "title": "汉服类型管理",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": false,
+        "isIframe": false,
+        "roles": [
+          "guanliyuan"
+        ],
+        "icon": "el-icon-football"
+      },
+      "children": [
+        {
+          "path": "/hanfuleixing/1",
+          "name": "hanfuleixing",
+          "component": "hanfuleixing/index",
+          "meta": {
+            "title": "汉服类型查询",
+            "isLink": "",
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false,
+            "isIframe": false,
+            "roles": [
+              "guanliyuan"
+            ],
+            "icon": "el-icon-basketball"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/hanfuhuodongglygl",
+      "name": "hanfuhuodongglygl",
+      "component": "layout/routerView/parent",
+      "meta": {
+        "title": "汉服活动管理",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": false,
+        "isIframe": false,
+        "roles": [
+          "guanliyuan"
+        ],
+        "icon": "el-icon-football"
+      },
+      "children": [
+        {
+          "path": "/hanfuhuodong/1",
+          "name": "hanfuhuodong",
+          "component": "hanfuhuodong/index",
+          "meta": {
+            "title": "汉服活动查询",
+            "isLink": "",
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false,
+            "isIframe": false,
+            "roles": [
+              "guanliyuan"
+            ],
+            "icon": "el-icon-basketball"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/shangpinglygl",
+      "name": "shangpinglygl",
+      "component": "layout/routerView/parent",
+      "meta": {
+        "title": "商品管理",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": false,
+        "isIframe": false,
+        "roles": [
+          "guanliyuan"
+        ],
+        "icon": "el-icon-football"
+      },
+      "children": [
+        {
+          "path": "/shangpin/1",
+          "name": "shangpin",
+          "component": "shangpin/index",
+          "meta": {
+            "title": "商品查询",
+            "isLink": "",
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false,
+            "isIframe": false,
+            "roles": [
+              "guanliyuan"
+            ],
+            "icon": "el-icon-basketball"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/dingdan",
+      "name": "dingdan",
+      "component": "layout/routerView/parent",
+      "meta": {
+        "title": "订单信息",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": false,
+        "isIframe": false,
+        "roles": [
+          "guanliyuan"
+        ],
+        "icon": "el-icon-s-grid"
+      },
+      "children": [
+        {
+          "path": "/dingdan/1",
+          "name": "dingdan",
+          "component": "order/index",
+          "meta": {
+            "title": "订单信息",
+            "isLink": "",
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false,
+            "isIframe": false,
+            "roles": [
+              "guanliyuan"
+            ],
+            "icon": "iconfont icon-caidan"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/bankuaiglygl",
+      "name": "bankuaiglygl",
+      "component": "layout/routerView/parent",
+      "meta": {
+        "title": "版块管理",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": false,
+        "isIframe": false,
+        "roles": ["guanliyuan"],
+        "icon": "el-icon-s-grid"
+      },
+      "children": [
+        {
+          "path": "/bankuai/1",
+          "name": "bankuai",
+          "component": "bankuai/index",
+          "meta": {
+            "title": "版块查询",
+            "isLink": "",
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false,
+            "isIframe": false,
+            "roles": ["guanliyuan"],
+            "icon": "iconfont icon-caidan"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/tieziglygl",
+      "name": "tieziglygl",
+      "component": "layout/routerView/parent",
+      "meta": {
+        "title": "帖子管理",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": false,
+        "isIframe": false,
+        "roles": ["guanliyuan"],
+        "icon": "el-icon-s-grid"
+      },
+      "children": [
+        {
+          "path": "/tiezi/1",
+          "name": "tiezi",
+          "component": "tiezi/index",
+          "meta": {
+            "title": "帖子查询",
+            "isLink": "",
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false,
+            "isIframe": false,
+            "roles": ["guanliyuan"],
+            "icon": "iconfont icon-caidan"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/yonghuglygl",
+      "name": "yonghuglygl",
+      "component": "layout/routerView/parent",
+      "meta": {
+        "title": "用户管理",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": false,
+        "isIframe": false,
+        "roles": [
+          "guanliyuan"
+        ],
+        "icon": "el-icon-football"
+      },
+      "children": [
+        {
+          "path": "/yonghu/1",
+          "name": "yonghu",
+          "component": "yonghu/index",
+          "meta": {
+            "title": "用户查询",
+            "isLink": "",
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false,
+            "isIframe": false,
+            "roles": [
+              "guanliyuan"
+            ],
+            "icon": "el-icon-basketball"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/yonghuglytj",
+      "name": "yonghuglytj",
+      "component": "layout/routerView/parent",
+      "meta": {
+        "title": "用户统计",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": false,
+        "isIframe": false,
+        "roles": [
+          "guanliyuan"
+        ],
+        "icon": "el-icon-football"
+      },
+      "children": [
+        {
+          "path": "/yonghu_tj_xingbie/1",
+          "name": "yonghu_tj_xingbie",
+          "component": "yonghu_tj_xingbie/index",
+          "meta": {
+            "title": "按性别统计",
+            "isLink": "",
+            "isHide": false,
+            "isKeepAlive": true,
+            "isAffix": false,
+            "isIframe": false,
+            "roles": [
+              "guanliyuan"
+            ],
+            "icon": "el-icon-basketball"
+          }
+        }
+      ]
+    },
+
+    {
+      "path": "/resetPass",
+      "name": "resetPass",
+      "component": "resetPass/index",
+      "meta": {
+        "title": "message.router.resetPass",
+        "isLink": "",
+        "isHide": false,
+        "isKeepAlive": true,
+        "isAffix": false,
+        "isIframe": false,
+        "roles": [
+          "guanliyuan"
+        ],
+        "icon": "el-icon-s-grid"
+      }
+    }
+  ]
+}

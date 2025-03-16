@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navid" class="top">
+        <div class="nav-bd">
+            <ul class="login">
+              <li class="login_no-bg">
+                   你好，欢迎来到测试一！
+                                          <a href="userlog.php">[登录]</a><a href="userreg.php">[注册]</a>
+                                     </li>
+             </ul>    
+        </div>
+ </div>
+<div class="layout bg2 nav ">
+ <div class="menu">
+   <div class="menu_rig">
+     <div class="clear"></div>
+     <div class="nav">
+       <ul class="nav_list">
+        <div class="menu_lef">
+   <a href="index.php">
+    <div class="qtimages-img">
+       <div class="zhuxuewang1" ><img src="qtimages/logo.jpg" width="100" height="99" /></div>
+       <div  class="zhuxuewang"  >测试一</div>
+    </div>
+   </a>
+   </div>
+          <li  class='drop-menu-effect'><a href='index.php'><span>首页</span></a></li>
+<li class='drop-menu-effect'><a href='userreg.php'><span>用户注册</span></a></li>
+
+  <li class='drop-menu-effect'><a style='cursor:pointer'><span>学生信息</span></a>
+   <ul class='submenu'> <li><a href='xueshengxinxilisttp.php'>学生信息</a></li> <li><a href='xueshengxinxiadd.php'>学生注册</a></li>  </ul>
+  </li>     <li class='drop-menu-effect'><a style='cursor:pointer'><span>车辆信息</span></a>
+   <ul class='submenu'> <li><a href='cheliangxinxilisttp.php'>车辆信息</a></li>  </ul>
+  </li>     <li class='drop-menu-effect'><a style='cursor:pointer'><span>新闻信息</span></a>
+   <ul class='submenu'> <li><a href='news.php?lb=站内新闻'>站内新闻</a></li> <li><a href='news.php?lb=购物需知'>购物需知</a></li> <li><a href='news.php?lb=促销公告'>促销公告</a></li>  </ul>
+  </li>     <li class='drop-menu-effect'><a style='cursor:pointer'><span>系统概要</span></a>
+   <ul class='submenu'> <li><a href='dx_detail.php?lb=系统简介'>系统简介</a></li> <li><a href='dx_detail.php?lb=关于我们'>关于我们</a></li> <li><a href='dx_detail.php?lb=联系方式'>联系方式</a></li>  </ul>
+  </li>     <li class='drop-menu-effect'><a style='cursor:pointer'><span>在线留言</span></a>
+   <ul class='submenu'> <li><a href='lyb.php'>在线留言</a></li> <li><a href='lyblist.php'>查看留言</a></li>  </ul>
+  </li><!--yoxulixuyaxn-->
+<li class='drop-menu-effect'><a href='login.html'><span>后台管理</span></a></li>
+         
+     
+       </ul>
+     </div>
+       <script>
+             $(function () {
+               
+               $(window).scroll(function () {
+                 //判断卷去的高度超过topPart的高度
+                 //1. 让navBar有固定定位
+                 //2. 让mainPart有一个marginTop
+                 if($(window).scrollTop() >= $(".top").height() ){
+                   $(".nav").addClass("fixed");
+                   $(".main").css("marginTop", $(".nav").height() + 10);
+//			          $("p").remove(".zhuxuewang");
+                   
+                 }else {
+                   $(".nav").removeClass("fixed");
+                   $(".main").css("marginTop", 0);
+                 }
+               });
+             });
+     function dropMenu(obj){
+         $(obj).each(function(){
+           var theSpan = $(this);
+           var theMenu = theSpan.find(".submenu");
+           var tarHeight = theMenu.height();
+           theMenu.css({height:0,opacity:0});
+           
+           var t1;
+           
+           function expand() {
+             clearTimeout(t1);
+             theSpan.find('a').addClass("selected");
+             theMenu.stop().show().animate({height:tarHeight,opacity:1},100);
+           }
+           
+           function collapse() {
+             clearTimeout(t1);
+             t1 = setTimeout(function(){
+               theSpan.find('a').removeClass("selected");
+               theMenu.stop().animate({height:0,opacity:0},100,function(){
+                 $(this).css({display:"none"});
+               });
+             }, 150);
+           }
+           
+           theSpan.hover(expand, collapse);
+           theMenu.hover(expand, collapse);
+         });
+       }
+     $(document).ready(function(){
+       dropMenu(".drop-menu-effect");
+     });
+     </script>
+     <div class="lanren-search-form">
+     <form method="post" action='cheliangxinxilist.php'>
+         <div id="search-hd" class="search-hd">
+             <div class="search-bg"></div>
+             <input name='cheliangbianhao' type="text" id="s1" class="search-input" placeholder="搜索">
+             <button id="submit" class="btn-search" value="搜索" type="submit"></button>
+         </div>
+     </form>
+     </div>
+   </div>
+ </div>
+</div> 
+<div class="content-block overview">
+     <div class="overview-carousel">
+         <div class="aui-Carousel">
+             <ul class="wrappers">
+                  <li class="" style="transition-duration: 1s;">
+                     <a  href="" rel="nofollow" target="_blank"><img src="uploadfile/5.jpg"></a>
+                 </li>
+                          <li class="" style="transition-duration: 1s;">
+                     <a  href="" rel="nofollow" target="_blank"><img src="uploadfile/4.jpg"></a>
+                 </li>
+                          <li class="" style="transition-duration: 1s;">
+                     <a  href="" rel="nofollow" target="_blank"><img src="uploadfile/3.jpg"></a>
+                 </li>
+                          <li class="" style="transition-duration: 1s;">
+                     <a  href="" rel="nofollow" target="_blank"><img src="uploadfile/2.jpg"></a>
+                 </li>
+                          <li class="" style="transition-duration: 1s;">
+                     <a  href="" rel="nofollow" target="_blank"><img src="uploadfile/1.jpg"></a>
+                 </li>
+        
+              </ul>
+         </div>
+     </div>
+ </div>
+<script src="qtimages/js/ga.js"></script>
+<script src="qtimages/js/index.js"></script>  <div class="layout bg4">
+ <div class="ind_news">
+   <ul>
+     <a >
+     <li>
+       <span>
+         <h3>新闻动态</h3>
+         <h4>全面了解助学新版</h4>
+       </span>
+       <div>
+       <img src="qtimages/picture/in_01.png">
+       </div>
+     </li>
+     </a>
+     <a>
+     <li>
+       <span>
+         <h3>招贤纳士</h3>
+         <h4>汇聚天下英才</h4>
+       </span>
+       <div>
+       <img src="qtimages/picture/in_02.png">
+       </div>
+     </li>
+     </a>
+     <a>
+     <li>
+       <span>
+         <h3>价值愿景</h3>
+         <h4>开创不同凡响的未来</h4>
+       </span>
+       <div>
+       <img src="qtimages/picture/in_03.png">
+       </div>
+     </li>
+     </a>
+     <a>
+     <li style="background:none;">
+       <span>
+         <h3>媒体视频</h3>
+         <h4>发现精彩瞬间</h4>
+       </span>
+       <div>
+       <img src="qtimages/picture/in_04.png">
+       </div>
+     </li>
+     </a>
+   </ul>
+ </div>
+</div>
+<script type="text/javascript" >
+$(document).ready(function() {
+$(".ind_news li").hover(function() {
+     $(this).find("img").stop().animate({ marginTop: "-5px" }, 200);
+     $(this).addClass("ind_news_color")
+ },function(){
+     $(this).find("img").stop().animate({ marginTop: "0" }, 300);
+     $(this).removeClass("ind_news_color")
+ });
+});
+</script><div class='layout'><div class='ind_tit'><h2>车辆推荐</h2></div></div>
+<div class='layout'>
+ <div class='scrollpic'>
+   <div id='mybtns'> <a href='javascript:;' id='right'></a><a href='javascript:;' id='left'></a>  </div>
+   <div id='myscroll'>
+     <div id='myscrollbox'>
+       <ul>
+                   <li><a href='cheliangxinxidetail.php?id=11'><img src='uploadfile/cheliangxinxi2.jpg' width='260' height='270'><span class='intro'><h5>现代</h5><h2></h2><h3>查看详情</h3></span></a></li>
+                     <li><a href='cheliangxinxidetail.php?id=10'><img src='uploadfile/cheliangxinxi3.jpg' width='260' height='270'><span class='intro'><h5>奥拓</h5><h2></h2><h3>查看详情</h3></span></a></li>
+                     <li><a href='cheliangxinxidetail.php?id=9'><img src='uploadfile/cheliangxinxi5.jpg' width='260' height='270'><span class='intro'><h5>奔驰</h5><h2></h2><h3>查看详情</h3></span></a></li>
+                     <li><a href='cheliangxinxidetail.php?id=8'><img src='uploadfile/cheliangxinxi1.jpg' width='260' height='270'><span class='intro'><h5>奥拓</h5><h2></h2><h3>查看详情</h3></span></a></li>
+                     <li><a href='cheliangxinxidetail.php?id=7'><img src='uploadfile/cheliangxinxi10.jpg' width='260' height='270'><span class='intro'><h5>奥迪</h5><h2></h2><h3>查看详情</h3></span></a></li>
+                     <li><a href='cheliangxinxidetail.php?id=6'><img src='uploadfile/cheliangxinxi6.jpg' width='260' height='270'><span class='intro'><h5>路虎</h5><h2></h2><h3>查看详情</h3></span></a></li>
+                     <li><a href='cheliangxinxidetail.php?id=5'><img src='uploadfile/cheliangxinxi9.jpg' width='260' height='270'><span class='intro'><h5>奔驰</h5><h2></h2><h3>查看详情</h3></span></a></li>
+                     <li><a href='cheliangxinxidetail.php?id=4'><img src='uploadfile/cheliangxinxi7.jpg' width='260' height='270'><span class='intro'><h5>奔驰</h5><h2></h2><h3>查看详情</h3></span></a></li>
+                     <li><a href='cheliangxinxidetail.php?id=3'><img src='uploadfile/cheliangxinxi4.jpg' width='260' height='270'><span class='intro'><h5>法拉利</h5><h2></h2><h3>查看详情</h3></span></a></li>
+                     <li><a href='cheliangxinxidetail.php?id=2'><img src='uploadfile/cheliangxinxi8.jpg' width='260' height='270'><span class='intro'><h5>现代</h5><h2></h2><h3>查看详情</h3></span></a></li>
+                   </ul>
+     </div>
+   </div>
+ </div>
+</div>
+<div class="layout" style="height:480px;">
+<div class="yanfa">
+ <div style="display:inline-block;width:100%;position:relative;height:480px;background:url(qtimages/images/yld_bg.jpg) center center no-repeat;">
+   <div class="triangle_shap">
+   </div>
+   <div class="triangle_shap1">
+   </div>
+   <div class="yan_f yan_fir">
+     <a href="#"><img src="qtimages/picture/1484210574.jpg"></a>
+     <span>
+       <h3>IPD研发管理咨询</h3>
+       <p>
+ <span style="line-height:1.5;">深入企业产品研发管理领域，进行产品开发流程体系...</span> 
+</p>          <a href="#"><h5>查看更多</h5></a>
+     </span>
+   </div>
+   <div class="yan_t yan_f">
+     <a href="#"><img src="qtimages/picture/1542343938.png"></a>
+     <span>
+       <h3>研发领域IT规划</h3>
+                 <a href="#"><h5>查看更多</h5></a>
+     </span>
+   </div>
+   <div class="yan_h yan_f">
+     <a href="#"><img src="qtimages/picture/1542337027.png"></a>
+     <span>
+       <h3>全领域IT集成</h3>
+                 <a href="#"><h5>查看更多</h5></a>
+     </span>
+   </div>
+   <div class="yan_o yan_f">
+     <a href="#"><img src="qtimages/picture/1542337384.png"></a>
+     <span>
+       <h3>IT外包服务</h3>
+                 <a href="#"><h5>查看更多</h5></a>
+     </span>
+   </div>
+   <div class="yan_i">
+     <h3>咨询<br/>服务</h3>
+   </div>
+ </div>
+</div>
+</div><div class='layout'><div class='ind_tit'><h2>学生<a ><b><a href='xueshengxinxilist.jsp' >查看更多</a></b></a></h2></div></div>
+<div class='layout'>
+ <div class='bs-example'>
+     <div class='row'>
+                  <div class='col-sm-6'>
+             <div class='ih-item square effect13 bottom_to_top square1'>
+                 <a href='xueshengxinxidetail.php?id=11'><div class='img'><img src='uploadfile/xueshengxinxi7.jpg' ></div><div class='info'><h3>赵姿吟</h3><p><span style='font-size:16px;'><br /></span></p><p><span style='font-size:16px;'><br /></span></p><p><br /></p><h4>查看详情</h4></div></a>
+               </div>
+         </div>
+                 <div class='col-sm-6'>
+             <div class='ih-item square effect13 bottom_to_top square1'>
+                 <a href='xueshengxinxidetail.php?id=10'><div class='img'><img src='uploadfile/xueshengxinxi10.jpg' ></div><div class='info'><h3>黄行阳</h3><p><span style='font-size:16px;'><br /></span></p><p><span style='font-size:16px;'><br /></span></p><p><br /></p><h4>查看详情</h4></div></a>
+               </div>
+         </div>
+                 <div class='col-sm-6'>
+             <div class='ih-item square effect13 bottom_to_top square1'>
+                 <a href='xueshengxinxidetail.php?id=9'><div class='img'><img src='uploadfile/xueshengxinxi3.jpg' ></div><div class='info'><h3>冯子杰</h3><p><span style='font-size:16px;'><br /></span></p><p><span style='font-size:16px;'><br /></span></p><p><br /></p><h4>查看详情</h4></div></a>
+               </div>
+         </div>
+             </div>
+ </div>
+</div>
+
+<div class="layout" style="border-bottom:1px solid #dedede;">
+<div class="ind_tit" style="margin-top:40px;">
+  <h2>我们和最优秀的团队合作，创造价值，共赢未来。</h2>
+</div>
+</div>
+<div class="layout">
+ <div class="firend">
+   <ul>
+            <li><a href="http://www.163.com"><img src="uploadfile/yahoo.jpg" alt="网易" width="181" title="网易"></a></li>
+              <li><a href="http://www.qq.com"><img src="uploadfile/qq.jpg" alt="QQ" width="181" title="QQ"></a></li>
+              <li><a href="http://www.sina.com"><img src="uploadfile/sina.jpg" alt="新浪" width="181" title="新浪"></a></li>
+              <li><a href="http://www.google.cn"><img src="uploadfile/google.jpg" alt="谷歌" width="181" title="谷歌"></a></li>
+              <li><a href="http://www.baidu.com"><img src="uploadfile/baidu.jpg" alt="百度" width="181" title="百度"></a></li>
+       
+   </ul>
+   <ul>
+
+   </ul>
+ </div>
+</div>
+ <div class="layout bg5">
+ <div class="footer">
+   <ul>
+     <h3>产品与服务</h3>
+     <a><li>产品方案</li></a>
+     <a><li>技术服务</li></a>
+   </ul>
+   <ul>
+     <h3>客户与合作</h3>
+     <a><li>主要客户</li></a>
+     <a><li>战略伙伴</li></a>
+     <a><li>典型案例</li></a>
+   </ul>
+   <ul>
+     <h3>资讯中心</h3>
+     <a><li>公司动态</li></a>
+     <a><li>媒体视频</li></a>
+     <a><li>真我风采</li></a>
+     <ax><li>友情链接</li></a>
+   </ul>
+   <ul>
+     <h3>英雄加盟</h3>
+     <a><li>招贤纳士</li></a>
+     <a><li>关怀与成长</li></a>
+     <a><li>职业发展</li></a>
+     <a><li>总经理致辞</li></a>
+   </ul>
+   <ul style="width:97px;float:right;text-align:center;">
+     <h3>官方微信</h3>
+     <img src="qtimages/picture/1484283352.jpg" alt="官方微信" title="官方微信">
+   </ul>
+ </div>
+</div>
+<div class="layout bg3">
+ <div class="foot">
+   <div class="foot_lef">
+     <div class="goumai_b">
+       <div class="slideTxtBox">
+         <div class="hd">
+           <ul>
+               <li class="on">上海</li>
+               <li>深圳</li>
+               <li>西安</li>
+               <li>成都</li>
+           </ul>
+         </div>
+         <div class="bd">
+           <div  style="display: block;">上海市长宁区新华路728号华联发展大厦908-910室 </div>
+           <div  style="display: none;">深圳市龙岗区坂田街道黄君山111号山海商业广场C栋4-5楼 </div>
+           <div  style="display: none;">西安市高新区天谷八路环普科技产业园C座301室 </div>
+           <div  style="display: none;">成都市高新区天府三街288号大有智慧广场1栋8楼</div>
+         </div>
+       </div>
+       <script type="text/javascript">jQuery(".slideTxtBox").slide();</script>
+        <!--  <script type="text/javascript">jQuery(".slideTxtBox").slide({trigger:"click"});</script> -->
+     </div>
+   </div>
+   <div class="foot_rig">
+     <div class="foot_rig_t">
+       <a href="#"><span><img src="qtimages/picture/l_01.png"></span></a>
+       <a href="#"><span><img src="qtimages/picture/l_02.png"></span></a>
+       <a href="#"><span><img src="qtimages/picture/l_03.png"></span></a>
+       <a href="#"><span><img src="qtimages/picture/l_04.png"></span></a>
+     </div>
+     <div class="foot_rig_o">@ 2019  测试一 . All Rights Reserved. <a href="#">沪ICP备xxxxxx号</a>&nbsp;</div>
+   </div>
+ </div>
+</div>
+<p id="back-to-top"><a href="#top"><span></span></a></p>
+
+</div>
+<script>
+   $(function () {
+       //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+       $(function () {
+           $(window).scroll(function () {
+               if ($(window).scrollTop() > 100) {
+                   $("#back-to-top").fadeIn(900);
+               }
+               else {
+                   $("#back-to-top").stop().fadeOut(900);
+               }
+           });
+           //当点击跳转链接后，回到页面顶部位置
+           $("#back-to-top").click(function () {
+               $('body,html').stop().animate({ scrollTop: 0 }, 100); //1000代表1秒时间回到顶点
+               return false;
+           });
+       });
+   });
+</script> 
+</body>
+</html>
